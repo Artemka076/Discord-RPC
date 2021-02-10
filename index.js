@@ -6,6 +6,7 @@ const RPC = require("discord-rpc")
 const client = new RPC.Client({ transport: 'ipc' });
 
 client.on('ready', () => {
+    console.log('Приложение запущено!');
     client.request('SET_ACTIVITY', {
         'pid': process.pid,
         'activity': {
